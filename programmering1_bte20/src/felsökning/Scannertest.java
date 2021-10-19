@@ -9,7 +9,7 @@ public class Scannertest {
 
 		   System.out.println("ange tal");
 
-		    double tal  = 	s1.nextDouble();
+		    double tal  = 	s1.nextDouble(); // kan ge exekveringsfel
 
 		    double produkt=tal*tal;
 
