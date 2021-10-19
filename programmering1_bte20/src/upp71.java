@@ -14,6 +14,7 @@ public class upp71 {
 	                JOptionPane.DEFAULT_OPTION, JOptionPane.INFORMATION_MESSAGE, null, options, options[0]);
 	        System.out.println(x);
 
+
 	}
 
 
