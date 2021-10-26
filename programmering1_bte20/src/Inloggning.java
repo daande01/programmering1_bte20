@@ -1,3 +1,4 @@
+import java.util.Calendar;
 import java.util.Scanner;
 
 public class Inloggning {
@@ -5,6 +6,9 @@ public class Inloggning {
 
 	public static void main(String[] args) {
 
+
+
+		System.out.println(Calendar.getInstance().getTime().toString());
 
 
 
@@ -15,7 +19,7 @@ public class Inloggning {
 
 		System.out.print("ange username:");
 		String us=sc.nextLine();
-		System.out.println("ange lösenord:");
+
 		String pass=sc.nextLine();
 
 
