@@ -11,6 +11,8 @@ public class övnprovmetoder {
 		double a=beräknaAreaTriangel(b,h);
 
 		System.out.println(a);
+
+
 	}
 
 	public static double beräknaAreaTriangel(int b, int h) {
