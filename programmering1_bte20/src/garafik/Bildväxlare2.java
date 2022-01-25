@@ -8,13 +8,13 @@ import javax.swing.JButton;
 import javax.swing.JFrame;
 import javax.swing.JLabel;
 
-public class Bildväxlare extends JFrame {
+public class Bildväxlare2 extends JFrame {
 
 	private JLabel l1 = new JLabel(new ImageIcon("ff.jpg"));
 	private JButton b1 = new JButton("byt bild");
-	boolean bild = true;
 
-	public Bildväxlare() {
+
+	public Bildväxlare2() {
 
 		setLayout(new FlowLayout());
 		setVisible(true);
@@ -23,14 +23,14 @@ public class Bildväxlare extends JFrame {
 		add(b1);
 		b1.addActionListener(e -> {
 
-			if (bild == true) {
+			if (l1.getIcon().toString().equals("ff.jpg")) {
 
 				l1.setIcon(new ImageIcon("ff1.png"));
-				bild = false;
-			}else {
+
+			}else  {
 
 				l1.setIcon(new ImageIcon("ff.jpg"));
-				bild = true;
+
 
 			}
 
@@ -39,7 +39,7 @@ public class Bildväxlare extends JFrame {
 	}
 
 	public static void main(String[] args) {
-		new Bildväxlare();
+		new Bildväxlare2();
 	}
 
 }
