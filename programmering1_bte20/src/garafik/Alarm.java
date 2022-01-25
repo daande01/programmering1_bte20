@@ -13,17 +13,7 @@ public class Alarm {
 
 	public Alarm() {
 
-		System.out.println(LocalDateTime.now().getHour());
-		timer.scheduleAtFixedRate(new TimerTask() {
-			  @Override
-			  public void run() {
-			   if (tid==alarmtid) {
 
-				   Toolkit.getDefaultToolkit().beep();
-			   }
-
-			  }
-			},1000 ,1000);
 
 	}
 
@@ -35,6 +25,27 @@ public class Alarm {
 		return alarm;
 	}
 
+	public void setLarm(String tid ) {
+
+		System.out.println(LocalDateTime.now().getHour());
+		timer.scheduleAtFixedRate(new TimerTask() {
+			  @Override
+			  public void run() {
+				  int hh= LocalDateTime.now().getHour();
+				  int mm= LocalDateTime.now().getMinute();
+				  //hh:mm
+				 int larmhh =Integer.parseInt(tid.substring(0,2));
+				 int larmmm=Integer.parseInt(tid.substring(3,5));
+				 System.out.println(hh+" "+mm);
+
+				 if (hh==larmhh && mm==larmmm) {
+
+				   Toolkit.getDefaultToolkit().beep();
+			   }
+
+			  }
+			},1000 ,1000);
+	}
 
 
 	public static void main(String[] args) {
