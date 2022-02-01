@@ -3,13 +3,15 @@ package egengrafik;
 import java.awt.Dimension;
 import java.awt.FlowLayout;
 import java.awt.Graphics;
+import java.awt.event.KeyEvent;
+import java.awt.event.KeyListener;
 
 import javax.swing.JButton;
 import javax.swing.JComponent;
 import javax.swing.JFrame;
 import javax.swing.JPanel;
 
-public class Kombo extends JComponent {
+public class Kombo extends JComponent implements KeyListener{
 
 	private int x=200;
 
@@ -26,8 +28,27 @@ public class Kombo extends JComponent {
 		super.paintComponent(g);
 		g.fillRect(x, 200, 50, 50);
 	}
+ @Override
+public void keyPressed(KeyEvent e) {
 
 
+	 if (e.getKeyCode()==KeyEvent.VK_UP) {
+
+		 System.out.println("up");
+		 x+=20;
+		 repaint();
+	 }
+
+}
+@Override
+public void keyReleased(KeyEvent e) {
+	// TODO Auto-generated method stub
+}
+@Override
+public void keyTyped(KeyEvent e) {
+	// TODO Auto-generated method stub
+
+}
 
 
 
@@ -41,6 +62,7 @@ public class Kombo extends JComponent {
 		p.setLayout(new FlowLayout());
 		JButton b= new JButton("\u261E");
 		p.add(b);
+		f.addKeyListener(k);
 		b.addActionListener(e->{
 
 
